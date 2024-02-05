@@ -4,23 +4,25 @@ $user = 'root';
 $password = 'root';
 
 try {
-    // データベースに接続
     $dbh = new PDO($dsn, $user, $password);
-    echo 'Connection to DB<br>';
+    // echo 'Connection to DB<br>';
 
-    // SQL ステートメント
     $sql = 'SELECT * FROM questions';
+    $sql1='SELECT*FROM choices';
 
-    // テーブル内のレコードを順番に出力
-    foreach ($dbh->query($sql) as $row) {
-        // レコードの各カラムを表示
-        echo 'Question ID: ' . $row['question_id'] . '<br>';
-        echo 'Question Text: ' . $row['question_text'] . '<br>';
-        echo 'Choices: ' . $row['choices'] . '<br>';
-        echo '<br>';
-    }
+    // foreach ($dbh->query($sql) as $row) {
+    //     echo  $row['id'] ;
+    //     echo  $row['content'] ;
+    //     echo  $row['supplement'];
+    // }
+
+    // foreach ($dbh->query($sql1) as $row) {
+    //     echo  $row['question_id'] ;
+    //     echo  $row['name'] ;
+    //     echo  $row['valid'] ;
+    // }
+
 } catch (PDOException $e) {
-    // 接続エラー時のメッセージ
     echo 'Connection failed: ' . $e->getMessage();
 }
 ?>

@@ -1,0 +1,76 @@
+main {
+    background-color: lightgray;
+}
+/* header */
+.header{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: steelblue;
+    border-bottom: solid 1px #EEEEEE;
+    padding: 0 35px;
+    z-index: 10000;
+    justify-content: space-between;
+}
+
+/* main */
+
+.main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 110px auto;
+    gap: 10px;
+}
+.select-tag {
+    background-color: khaki;
+    padding-top: 20px;
+    padding-left: 10px;
+    line-height: 40px;
+}
+
+/* select */
+.quiz {
+    padding: 20px;
+}
+.q-word {
+    font-size: 40px;
+}
+.q-guidance {
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+    padding-top: 30px;
+    line-height: 50px;
+    border-bottom: solid 1px;
+}
+.q-select {
+    display: grid;
+    grid-template-columns: 30px auto 60px;
+    border-bottom: solid 0.5px gray;
+}
+.q-select > li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* create */
+.c-quiz {
+    line-height: 15px;
+}
+.c-quiz > li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.c-label,.c-check > label {
+    display: block;
+}
+.c-label > input {
+    width: 100%;
+}
+.c-check > input {
+    width: 30%;
+}
